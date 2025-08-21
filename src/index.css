@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    font-family: "Outfit",sans-serif;
+}
+
+@import "tailwindcss";
+
+/* hidding scroll bar */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Your custom styles */
+.text-primary {
+  color: rgb(79, 14, 125);
+}
+
+.bg-primary {
+  background-color: rgb(79, 14, 125);
+}
