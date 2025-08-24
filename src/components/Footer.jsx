@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-3 space-x-5 mt-5 ">
           {footer_data.map((data, indx) => (
             <div key={indx} className="flex flex-col gap-2">
-              <h6 className="font-bold text-[1.1rem]">{data.title}</h6>
+              <h6 className="font-semibold text-[1.1rem]">{data.title}</h6>
               <ul className="text-gray-500 font-medium text-[0.9rem]">
                 {data.links.map((link, indx) => (
                   <li key={indx}>
@@ -30,9 +30,9 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-center mt-9 mb-5">
-        <hr className="h-[0.001% border w-[90%] border-gray-400" />
+        <hr className="h-[0.001% border w-[90%] border-gray-400 " />
       </div>
-      <p className="text-center my-4 text-[1rem] font-medium text-gray-500">
+      <p className="text-center pb-4 text-[1rem] font-normal text-gray-500/100">
         Copyright 2025 © QuickBlog GreatStack - All Right Reserved.
       </p>
     </div>

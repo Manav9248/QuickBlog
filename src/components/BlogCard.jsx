@@ -22,7 +22,7 @@ const BlogCard = () => {
                 {dash.category}
               </h1>
               <h1 className="font-semibold m-3 text-black">{dash.title}</h1>
-              <p className="mx-3 text-xs" dangerouslySetInnerHTML={{"__html": dash.description.slice(0, 80)}}></p>
+              <p className="mx-3 text-xs text-gray-500" dangerouslySetInnerHTML={{"__html": dash.subTitle.slice(0, 80)}}></p>
             </div>
           </div>
         ))}
