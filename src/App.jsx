@@ -2,9 +2,11 @@ import "./index.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
-import Admin from "./pages/Admin";
-import Logout from "./components/Logout";
-
+import Layout from "./pages/admin/Layout";
+import Dashboard from "./pages/admin/Dashboard";
+import Addblog from "./pages/admin/Addblog"
+import Listblog from "./pages/admin/ListBlog"
+import Comments from "./pages/admin/Comments"
 
 function App() {
   return (
@@ -12,9 +14,14 @@ function App() {
       <div className="overflow-x-hidden overflow-y-auto">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog/:id" element={<Blog/>}/>
-          <Route path="/admin" element={<Admin/>}/>
-          <Route path="/admin/logout" element={<Logout/>}/>
+          <Route path="/blog/:id" element={<Blog />} />
+
+          <Route path="/admin" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="addBlog" element={<Addblog/>}/>
+            <Route path="listBlog" element={<Listblog/>}/>
+            <Route path="comments" element={<Comments/>}/>
+          </Route>
         </Routes>
       </div>
     </>

@@ -53,7 +53,7 @@ const formData = (e)=>{
               </div>
 
               <div className="flex justify-center mt-5 w-full">
-                <button onClick={()=>navigate("/admin/logout")} className="border ml-2 text-center w-full py-2.5 rounded bg-indigo-700 transiton-all text-white hover:bg-indigo-600 ">
+                <button onClick={()=>navigate("/admin/")} className="border ml-2 text-center w-full py-2.5 rounded bg-indigo-700 transiton-all text-white hover:bg-indigo-600 ">
                   Login
                 </button>
               </div>
