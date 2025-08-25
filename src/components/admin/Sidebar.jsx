@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <div className="border-r border-gray-300">
       <NavLink end={true} to={'/admin'}
-        className={({isActive})=>`flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-64 cursor-pointer ${isActive && "bg-indigo-100 border-r-4 border-purple-900"}`}
+        className={({isActive})=>`flex items-center gap-3 py-3.5 px-3 sm:mt-5 md:mt-0 md:px-9 md:min-w-64 cursor-pointer ${isActive && "bg-indigo-100 border-r-4 border-purple-900"}`}
       >
         <img src={assets.home_icon} alt="home" className="min-w-4 w-5"/>
         <p className="hidden  md:inline-block">Dashboard</p>

@@ -1,20 +1,16 @@
-// import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-
+import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-//  const [email,setEmail] = useState("manavpal@gmail.com");
+   const [email,setEmail] = useState("");
 
-// const [password,setPassword] = useState("123456789");
-const email = "manavpal@gamil.com";
-const password = "123456789"
+  const [password,setPassword] = useState("");
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const formData = (e)=>{
+  const formData = async (e) => {
     e.preventDefault();
-
-}
+  };
 
   return (
     <>
@@ -27,42 +23,46 @@ const formData = (e)=>{
             Enter your credential to access the admin panel
           </p>
 
-          <div>
-            <form className="mt-12" onSubmit={(e)=>formData(e)}>
-              <div className="flex flex-col mr-15">
-                <label className="text-gray-600" htmlFor="email">
-                  Email
-                </label>
-                <input
-                defaultValue={email}
-                  type="text"
-                  name="email"
-                  className="border-b border-gray-500 w-6/5 p-2 outline-none text-gray-600"
-                  placeholder="your email id"
-                />
-                <label className="text-gray-600 mt-4" htmlFor="password">
-                  Password
-                </label>
-                <input
-                defaultValue={password}
-                  type="password"
-                  name="password"
-                  className="border-b border-gray-500 w-5/4 px-2 py-1 outline-none text-gray-600"
-                  placeholder="your password"
-                />
-              </div>
+          {/* Form Section for login */}
+          <form className="mt-12" onSubmit={(e) => formData(e)}>
+            <div className="flex flex-col mr-15">
+              <label className="text-gray-600" htmlFor="email">
+                Email
+              </label>
+              <input
+                onChange={e=>setEmail(e.target.value)}
+                value={email}
+                type="text"
+                name="email"
+                className="border-b border-gray-500 w-6/5 p-2 outline-none text-gray-600"
+                placeholder="your email id"
+              />
+              <label className="text-gray-600 mt-4" htmlFor="password">
+                Password
+              </label>
+              <input
+               onChange={e=>setPassword(e.target.value)}
+                value={password}
+                type="password"
+                name="password"
+                className="border-b border-gray-500 w-5/4 px-2 py-1 outline-none text-gray-600"
+                placeholder="your password"
+              />
+            </div>
 
-              <div className="flex justify-center mt-5 w-full">
-                <button onClick={()=>navigate("/admin/")} className="border ml-2 text-center w-full py-2.5 rounded bg-indigo-700 transiton-all text-white hover:bg-indigo-600 ">
-                  Login
-                </button>
-              </div>
-            </form>
-          </div>
+            <div className="flex justify-center mt-5 w-full">
+              <button
+                onClick={() => navigate("/admin/")}
+                className="border ml-2 text-center w-full py-2.5 rounded bg-indigo-700 transiton-all text-white hover:bg-indigo-600 "
+              >
+                Login
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default Login
+export default Login;
