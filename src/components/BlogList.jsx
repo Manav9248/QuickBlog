@@ -6,7 +6,7 @@ const Mainhero = () => {
   const [menu, setMenu] = useState("All");
 
   return (
-    <div className="mt-7 mb-7 ">
+    <div className="">
       {/* form section */}
       <form className="flex justify-between mx-auto max-w-lg max-sm:scale-75 border rounded border-gray-300 bg-white overflow-hidden">
         <input

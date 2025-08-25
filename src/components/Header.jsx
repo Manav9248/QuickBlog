@@ -25,7 +25,7 @@ const Hero = () => {
         className="absolute -top-50 -z-1 opacity-50"
       />
 
-      <div className="mt-8 text-center  w-full ml-10 flex justify-center">
+      <div className="mt-8 text-center  w-full sm:ml-10 flex justify-center">
         <p className="sm:w-[38rem] md:w-[45rem] text-gray-600 font-medium">
           This is your space to think out loud, to share what matters, and to
           write without filters. Whether it's one word or a thousand, your story
