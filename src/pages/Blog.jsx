@@ -35,7 +35,7 @@ const Blog = () => {
   useEffect(() => {
     fetchBlogData();
     fetchComments();
-  });
+  },[]);
 
   return data ? (
     <div className="relative">
